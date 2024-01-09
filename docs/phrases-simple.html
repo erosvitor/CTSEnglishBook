@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="author" content="Eros Vitor Bornatowski">
+  <meta name="description" content="Exercícios para fixação do vocabulário e gramática da língua inglesa.">
+
+  <title>CTSEnglishBook</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container-fluid p-5 bg-primary text-white text-center">
+    <h1>CTSEnglishBook</h1>
+    <p>Exercícios para fixação do vocabulário e gramática da língua inglesa.</p> 
+  </div>
+
+  <div class="container mt-5">
+    <h1>Gramática - Verbo To Be</h1>
+  </div>
+    
+  <div class="container mt-5">
+    <div class="row mb-3">
+      <label for="edtIAmTall" class="col-sm-2 col-form-label">Eu sou alto</label>
+      <div class="col-sm-10">
+        <input id="edtIAmTall" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtYouAreBeautiful" class="col-sm-2 col-form-label">Você é bonito</label>
+      <div class="col-sm-10">
+        <input id="edtYouAreBeautiful" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtHeIsThin" class="col-sm-2 col-form-label">Ele é magro</label>
+      <div class="col-sm-10">
+        <input id="edtHeIsThin" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtSheIsTall" class="col-sm-2 col-form-label">Ela é alta</label>
+      <div class="col-sm-10">
+        <input id="edtSheIsTall" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtItIsUgly" class="col-sm-2 col-form-label">Ele (coisa) é feio</label>
+      <div class="col-sm-10">
+        <input id="edtItIsUgly" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtYou2AreHappy" class="col-sm-2 col-form-label">Vocês são felizes</label>
+      <div class="col-sm-10">
+        <input id="edtYou2AreHappy" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtWeAreShort" class="col-sm-2 col-form-label">Nós somos baixos</label>
+      <div class="col-sm-10">
+        <input id="edtWeAreShort" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtTheyAreFat" class="col-sm-2 col-form-label">Elas são gordas</label>
+      <div class="col-sm-10">
+        <input id="edtTheyAreFat" type="text" class="form-control">
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary" onclick="check()">Verificar</button>
+    <button type="button" class="btn btn-primary" onclick="reset()">Refazer</button>
+  </div>  
+</body>
+<script>
+function check() {
+  $('input').removeClass('invalid');
+  $('input').removeClass('is-invalid');
+
+  if ($('#edtIAmTall').val().toLowerCase() === 'i am tall') {
+    $('#edtIAmTall').addClass('is-valid');
+  } else { 
+    $('#edtIAmTall').addClass('is-invalid');
+  }
+  if ($('#edtYouAreBeautiful').val().toLowerCase() === 'you are beautiful') {
+    $('#edtYouAreBeautiful').addClass('is-valid');
+  } else {
+    $('#edtYouAreBeautiful').addClass('is-invalid');
+  }  
+  if ($('#edtHeIsThin').val().toLowerCase() === 'he is thin') {
+    $('#edtHeIsThin').addClass('is-valid');
+  } else {
+    $('#edtHeIsThin').addClass('is-invalid');
+  }
+  if ($('#edtSheIsTall').val().toLowerCase() === 'she is tall') {
+    $('#edtSheIsTall').addClass('is-valid');
+  } else {
+    $('#edtSheIsTall').addClass('is-invalid');
+  }
+  if ($('#edtItIsUgly').val().toLowerCase() === 'it is ugly') {
+    $('#edtItIsUgly').addClass('is-valid');
+  } else {
+    $('#edtItIsUgly').addClass('is-invalid');
+  }
+  if ($('#edtYou2AreHappy').val().toLowerCase() === 'you are happy') {
+    $('#edtYou2AreHappy').addClass('is-valid');
+  } else {
+    $('#edtYou2AreHappy').addClass('is-invalid'); 
+  }
+  if ($('#edtWeAreShort').val().toLowerCase() === 'we are short') {
+    $('#edtWeAreShort').addClass('is-valid');
+  } else {
+    $('#edtWeAreShort').addClass('is-invalid');  
+  }
+  if ($('#edtTheyAreFat').val().toLowerCase() === 'they are fat') {
+    $('#edtTheyAreFat').addClass('is-valid');
+  } else {
+    $('#edtTheyAreFat').addClass('is-invalid');  
+  }
+}
+
+function reset() {
+  $('input').removeClass('is-valid');
+  $('input').removeClass('is-invalid');
+  $('input').val('');
+}
+</script>
+</html>

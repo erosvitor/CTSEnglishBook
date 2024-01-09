@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="author" content="Eros Vitor Bornatowski">
+  <meta name="description" content="Exercícios para fixação do vocabulário e gramática da língua inglesa.">
+
+  <title>CTSEnglishBook</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container-fluid p-5 bg-primary text-white text-center">
+    <h1>CTSEnglishBook</h1>
+    <p>Exercícios para fixação do vocabulário e gramática da língua inglesa.</p> 
+  </div>
+
+  <div class="container mt-5">
+    <h1>Vocabulário - Frutas</h1>
+  </div>
+    
+  <div class="container mt-5">
+    <div class="row mb-3">
+      <label for="edtApple" class="col-sm-2 col-form-label">Maçã</label>
+      <div class="col-sm-10">
+        <input id="edtApple" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtBanana" class="col-sm-2 col-form-label">Banana</label>
+      <div class="col-sm-10">
+        <input id="edtBanana" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtPapaya" class="col-sm-2 col-form-label">Mamão</label>
+      <div class="col-sm-10">
+        <input id="edtPapaya" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtPear" class="col-sm-2 col-form-label">Pera</label>
+      <div class="col-sm-10">
+        <input id="edtPear" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtWatermelon" class="col-sm-2 col-form-label">Melância</label>
+      <div class="col-sm-10">
+        <input id="edtWatermelon" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtPineapple" class="col-sm-2 col-form-label">Abacaxi</label>
+      <div class="col-sm-10">
+        <input id="edtPineapple" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtMango" class="col-sm-2 col-form-label">Manga</label>
+      <div class="col-sm-10">
+        <input id="edtMango" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtLemon" class="col-sm-2 col-form-label">Limão</label>
+      <div class="col-sm-10">
+        <input id="edtLemon" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtGrape" class="col-sm-2 col-form-label">Uva</label>
+      <div class="col-sm-10">
+        <input id="edtGrape" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtMelon" class="col-sm-2 col-form-label">Melão</label>
+      <div class="col-sm-10">
+        <input id="edtMelon" type="text" class="form-control">
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary" onclick="check()">Verificar</button>
+    <button type="button" class="btn btn-primary" onclick="reset()">Refazer</button>
+  </div>  
+</body>
+<script>
+function check() {
+  $('input').removeClass('invalid');
+  $('input').removeClass('is-invalid');
+  
+  if ($('#edtApple').val().toLowerCase() === 'apple') {
+    $('#edtApple').addClass('is-valid');
+  } else { 
+    $('#edtApple').addClass('is-invalid');
+  }
+  if ($('#edtBanana').val().toLowerCase() === 'banana') {
+    $('#edtBanana').addClass('is-valid');
+
+  } else {
+    $('#edtBanana').addClass('is-invalid');
+  }  
+  if ($('#edtPapaya').val().toLowerCase() === 'papaya') {
+    $('#edtPapaya').addClass('is-valid');
+  } else {
+    $('#edtPapaya').addClass('is-invalid');
+  }
+  if ($('#edtPear').val().toLowerCase() === 'pear') {
+    $('#edtPear').addClass('is-valid');
+  } else {
+    $('#edtPear').addClass('is-invalid');
+  }
+  if ($('#edtWatermelon').val().toLowerCase() === 'watermelon') {
+    $('#edtWatermelon').addClass('is-valid');
+  } else {
+    $('#edtWatermelon').addClass('is-invalid');
+  }
+  if ($('#edtPineapple').val().toLowerCase() === 'pineapple') {
+    $('#edtPineapple').addClass('is-valid');
+  } else {
+    $('#edtPineapple').addClass('is-invalid'); 
+  }
+  if ($('#edtMango').val().toLowerCase() === 'mango') {
+    $('#edtMango').addClass('is-valid');
+  } else {
+    $('#edtMango').addClass('is-invalid');  
+  }
+  if ($('#edtLemon').val().toLowerCase() === 'lemon') {
+    $('#edtLemon').addClass('is-valid');
+  } else {
+    $('#edtLemon').addClass('is-invalid');  
+  }
+  if ($('#edtGrape').val().toLowerCase() === 'grape') {
+    $('#edtGrape').addClass('is-valid');
+  } else {
+    $('#edtGrape').addClass('is-invalid');
+  }
+  if ($('#edtMelon').val().toLowerCase() === 'melon') {
+    $('#edtMelon').addClass('is-valid');
+  } else {
+    $('#edtMelon').addClass('is-invalid');  
+  }
+}
+
+function reset() {
+  $('input').removeClass('is-valid');
+  $('input').removeClass('is-invalid');
+  $('input').val('');
+}
+</script>
+</html>

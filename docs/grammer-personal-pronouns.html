@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="author" content="Eros Vitor Bornatowski">
+  <meta name="description" content="Exercícios para fixação do vocabulário e gramática da língua inglesa.">
+
+  <title>CTSEnglishBook</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container-fluid p-5 bg-primary text-white text-center">
+    <h1>CTSEnglishBook</h1>
+    <p>Exercícios para fixação do vocabulário e gramática da língua inglesa.</p> 
+  </div>
+
+  <div class="container mt-5">
+    <h1>Gramática - Pronomes pessoais</h1>
+  </div>
+    
+  <div class="container mt-5">
+    <div class="row mb-3">
+      <label for="edtI" class="col-sm-2 col-form-label">Eu</label>
+      <div class="col-sm-10">
+        <input id="edtI" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtYou" class="col-sm-2 col-form-label">Você</label>
+      <div class="col-sm-10">
+        <input id="edtYou" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtHe" class="col-sm-2 col-form-label">Ele</label>
+      <div class="col-sm-10">
+        <input id="edtHe" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtShe" class="col-sm-2 col-form-label">Ela</label>
+      <div class="col-sm-10">
+        <input id="edtShe" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtIt" class="col-sm-2 col-form-label">Ele/Ela(coisas)</label>
+      <div class="col-sm-10">
+        <input id="edtIt" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtYou2" class="col-sm-2 col-form-label">Vocês</label>
+      <div class="col-sm-10">
+        <input id="edtYou2" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtWe" class="col-sm-2 col-form-label">Nós</label>
+      <div class="col-sm-10">
+        <input id="edtWe" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="edtThey" class="col-sm-2 col-form-label">Eles/Elas</label>
+      <div class="col-sm-10">
+        <input id="edtThey" type="text" class="form-control">
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary" onclick="check()">Verificar</button>
+    <button type="button" class="btn btn-primary" onclick="reset()">Refazer</button>
+  </div>  
+</body>
+<script>
+function check() {
+  $('input').removeClass('invalid');
+  $('input').removeClass('is-invalid');
+  
+  if ($('#edtI').val().toLowerCase() === 'i') {
+    $('#edtI').addClass('is-valid');
+  } else { 
+    $('#edtI').addClass('is-invalid');
+  }
+  if ($('#edtYou').val().toLowerCase() === 'you') {
+    $('#edtYou').addClass('is-valid');
+  } else {
+    $('#edtYou').addClass('is-invalid');
+  }  
+  if ($('#edtHe').val().toLowerCase() === 'he') {
+    $('#edtHe').addClass('is-valid');
+  } else {
+    $('#edtHe').addClass('is-invalid');
+  }
+  if ($('#edtShe').val().toLowerCase() === 'she') {
+    $('#edtShe').addClass('is-valid');
+  } else {
+    $('#edtShe').addClass('is-invalid');
+  }
+  if ($('#edtIt').val().toLowerCase() === 'it') {
+    $('#edtIt').addClass('is-valid');
+  } else {
+    $('#edtIt').addClass('is-invalid');
+  }
+  if ($('#edtYou2').val().toLowerCase() === 'you') {
+    $('#edtYou2').addClass('is-valid');
+  } else {
+    $('#edtYou2').addClass('is-invalid'); 
+  }
+  if ($('#edtWe').val().toLowerCase() === 'we') {
+    $('#edtWe').addClass('is-valid');
+  } else {
+    $('#edtWe').addClass('is-invalid');  
+  }
+  if ($('#edtThey').val().toLowerCase() === 'they') {
+    $('#edtThey').addClass('is-valid');
+  } else {
+    $('#edtThey').addClass('is-invalid');  
+  }
+}
+
+function reset() {
+  $('input').removeClass('is-valid');
+  $('input').removeClass('is-invalid');
+  $('input').val('');
+}
+</script>
+</html>
