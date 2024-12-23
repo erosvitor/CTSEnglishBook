@@ -462,10 +462,148 @@
     </div> 
 		<br/>
     <button type="button" class="btn btn-primary" onclick="checkAnswers()">Check</button>
-    <button type="button" class="btn btn-secondary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">Info</button>
     <br/><br/>
   </div>
+  
+	<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable">
+			<div class="modal-content">
+			  <div class="modal-header">
+			    <h5 class="modal-title" id="exampleModalLabel">Pronomes</h5>
+			    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			  </div>
+			  <div class="modal-body">
+ 					<p><b>Pronomes Pessoais e Objetivos</b></p>
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th scope="col">Pessoal</th>
+								<th scope="col">Objetivo</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>I</td>
+								<td>Me</td>
+							</tr>
+							<tr>
+								<td>You</td>
+								<td>You</td>
+							</tr>
+							<tr>
+								<td>He</td>
+								<td>Him</td>
+							</tr>
+							<tr>
+								<td>She</td>
+								<td>Her</td>
+							</tr>
+							<tr>
+								<td>It</td>
+								<td>It</td>
+							</tr>
+							<tr>
+								<td>We</td>
+								<td>Us</td>
+							</tr>
+							<tr>
+								<td>You</td>
+								<td>You</td>
+							</tr>
+							<tr>
+								<td>They</td>
+								<td>Them</td>
+							</tr>
+						</tbody>
+					</table>
+					<p><b>Obs1:</b> Pronomes pessoais só podem ser usados se estiverem conjugando um verbo, ou seja, deve haver um verbo logo após o pronome pessoal.</p>
+					<p><b>Obs2:</b> Pronomes objetivos são usados quando não estiverem conjugando um verbo, ou seja, não terá um verbo após o pronome objetivo.</p>
+					<p><b>Obs3:</b> Os pronomes pessoais e objetivos tem a mesma tradução.</p>
+					<ul>
+					  <li>Eu moro com ela</li>
+					  <li>I live with her</li>
+					</ul>
+					<ul>
+					  <li>Ela mora comigo</li>
+					  <li>She lives with me</li>
+					</ul>
+					<ul>
+					  <li>Eu e ela</li>
+					  <li>Me and her</li>
+					</ul>
+					<p><b>Pronomes Possessivos e Possessive Case</b></p>
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th scope="col">Possessivo</th>
+								<th scope="col">Possessive Case</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>My</td>
+								<td>Mine</td>
+							</tr>
+							<tr>
+								<td>Your</td>
+								<td>Yours</td>
+							</tr>
+							<tr>
+								<td>His</td>
+								<td>His</td>
+							</tr>
+							<tr>
+								<td>Her</td>
+								<td>Hers</td>
+							</tr>
+							<tr>
+								<td>Its</td>
+								<td>Its</td>
+							</tr>
+							<tr>
+								<td>Our</td>
+								<td>Ours</td>
+							</tr>
+							<tr>
+								<td>Your</td>
+								<td>Yours</td>
+							</tr>
+							<tr>
+								<td>Their</td>
+								<td>Theirs</td>
+							</tr>
+						</tbody>
+					</table>
+					<p><b>Obs1:</b> Pronome possessivo só pode ser usado antes de substantivo</p>
+					<p><b>Obs2:</b> Pronome possessive case é usado quando não existir substantivo depois do pronome possessivo.</p>
+					<ul>
+					  <li>Esse é meu carro</li>
+					  <li>This is my car</li>
+					</ul>
+					<ul>
+					  <li>Esse carro é meu</li>
+					  <li>This car is mine</li>
+					</ul>
+					<ul>
+					  <li>Meu carro é azul</li>
+					  <li>My car is blue</li>
+					</ul>
+					<ul>
+					  <li>O meu é azul</li>
+					  <li>Mine is blue</li>
+					</ul>
+					<p><b>Obs3:</b> No Inglês não se usa artigo (the) antes de pronome possessivo.</p>
+			  </div>
+			  <div class="modal-footer">
+			    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		</div>
+	</div>
 </body>
+
 <script>
   const answers = [
     "a", "b", "a", "a", "b",

@@ -142,10 +142,195 @@
     </div>
 		<br/>
     <button type="button" class="btn btn-primary" onclick="checkAnswers()">Check</button>
-    <button type="button" class="btn btn-secondary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">Info</button>
     <br/><br/>
   </div>  
+
+	<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable">
+			<div class="modal-content">
+			  <div class="modal-header">
+			    <h5 class="modal-title" id="exampleModalLabel">Frases negativas</h5>
+			    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			  </div>
+			  <div class="modal-body">
+					<p><b>Frases contendo verbo to be</b></p>
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th scope="col">Frase Original</th>
+								<th scope="col">Forma Contraída 1</th>
+								<th scope="col">Forma Contraída 2</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>I am not</td>
+								<td>I'm not</td>
+								<td>I am not</td>
+							</tr>
+							<tr>
+								<td>You are not</td>
+								<td>You're not</td>
+								<td>You aren't</td>
+							</tr>
+							<tr>
+								<td>He is not</td>
+								<td>He's not</td>
+								<td>He isn't</td>
+							</tr>
+							<tr>
+								<td>She is not</td>
+								<td>She's not</td>
+								<td>She isn't</td>
+							</tr>
+							<tr>
+								<td>It is not</td>
+								<td>It's not</td>
+								<td>It isn't</td>
+							</tr>
+							<tr>
+								<td>We are not</td>
+								<td>We're not</td>
+								<td>We aren't</td>
+							</tr>
+							<tr>
+								<td>You are not</td>
+								<td>You're not</td>
+								<td>You aren't</td>
+							</tr>
+							<tr>
+								<td>They are not</td>
+								<td>They're not</td>
+								<td>They aren't</td>
+							</tr>
+						</tbody>
+					</table>
+					<ul class="list-unstyled">
+					  <li>You are happy today</li>
+					  <li>You aren't happy today</li>
+					</ul>
+					<ul class="list-unstyled">
+					  <li>She is tired tonight</li>
+					  <li>She isn't tired tonight</li>
+					</ul>
+					<p><b>Frases contendo outros verbos</b></p>
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th scope="col">Frase Original</th>
+								<th scope="col">Forma Contraída</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>I do not</td>
+								<td>I don't</td>
+							</tr>
+							<tr>
+								<td>You do not</td>
+								<td>You don't</td>
+							</tr>
+							<tr>
+								<td>He does not</td>
+								<td>He doesn't</td>
+							</tr>
+							<tr>
+								<td>She does not</td>
+								<td>She doesn't</td>
+							</tr>
+							<tr>
+								<td>It does not</td>
+								<td>It doesn't</td>
+							</tr>
+							<tr>
+								<td>We do not</td>
+								<td>We don't</td>
+							</tr>
+							<tr>
+								<td>You do not</td>
+								<td>You don't</td>
+							</tr>
+							<tr>
+								<td>They do not</td>
+								<td>They don't</td>
+							</tr>
+						</tbody>
+					</table>
+					<ul>
+					  <li>You live in Miami</li>
+					  <li>You don't live in Miani</li>
+					</ul>
+					<ul>
+					  <li>She lives in Miami</li>
+					  <li>She doesn't live in Miami</li>
+					</ul>
+					<p><b>Frases contendo verbos auxiliares</b></p>
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th scope="col">Frase Original</th>
+								<th scope="col">Forma Contraída</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>will not</td>
+								<td>won't</td>
+							</tr>
+							<tr>
+								<td>would not</td>
+								<td>wouldn't</td>
+							</tr>
+							<tr>
+								<td>cannot</td>
+								<td>can't</td>
+							</tr>
+							<tr>
+								<td>could not</td>
+								<td>couldn't</td>
+							</tr>
+							<tr>
+								<td>shall not</td>
+								<td>------</td>
+							</tr>
+							<tr>
+								<td>should not</td>
+								<td>shouldn't</td>
+							</tr>
+							<tr>
+								<td>may not</td>
+								<td>------</td>
+							</tr>
+							<tr>
+								<td>might not</td>
+								<td>------</td>
+							</tr>
+						</tbody>
+					</table>
+					<ul>
+					  <li>You will buy a house (Você comprará uma casa)</li>
+					  <li>You won'y buy a bouse (Você não comprará uma casa)</li>
+					</ul>
+					<ul>
+					  <li>He could stay home (Ele poderia ficar em casa)</li>
+					  <li>He couldn't stay home (Ele não poderia ficar em casa)</li>
+					</ul>
+					<ul>
+					  <li>She might go to the beach (Ela talvez vá para a praia)</li>
+					  <li>She might not go to the beach (Ela talvez não vá para a praia)</li>
+					</ul>
+					<p><b>Obs:</b> Utiliza-se 'house' quando se refere a casa dos outros ou a casa como objeto. Home é utilizado quando se refere a casa própria (minha casa)</p>
+			  </div>
+			  <div class="modal-footer">
+			    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		</div>
+	</div>
 </body>
+
 <script>
   const answers = [
     "You are not my friend|You're not my friend|You aren't my friend",

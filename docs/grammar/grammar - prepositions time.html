@@ -269,12 +269,51 @@
 		<br/>
     
     <button type="button" class="btn btn-primary" onclick="checkAnswers()">Check</button>
-    <button type="button" class="btn btn-secondary" onclick="tryAgain()">Try again</button>
-    
+    <button type="button" class="btn btn-primary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">Info</button>
     <br/><br/>
-    
   </div>
+
+	<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable">
+			<div class="modal-content">
+			  <div class="modal-header">
+			    <h5 class="modal-title" id="exampleModalLabel">Preposições de tempo</h5>
+			    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			  </div>
+			  <div class="modal-body">
+				<p><b>in e at</b> = 'in' para períodos diurnos e 'at' para períodos noturnos</p>
+				<ul>
+					<li>I work in the morning</li>
+					<li>I work in the afternoon</li>
+					<li>I work in the evening</li>
+					<li>I work at night</li>
+				</ul>
+
+				<p><b>on</b> = para tudo que se refere a semana</p>
+				<ul>
+					<li>I work on Monday (Eu trabalho na segunda)</li>
+					<li>I work on Saturdays (Eu trabalho aos sábados)</li>
+					<li>I work on weekdays (Eu trabalho nos dias de semana)</li>
+					<li>I work on weekends (Eu trabalho nos fins de semana)</li>
+				</ul>
+
+				<p><b>at</b> = para horários</p>
+				<ul>
+					<li>I work at ten o'clock</li>
+					<li>I work at 10:00</li>
+					<li>I work at noon</li>
+					<li>I work at midnight</li>
+				</ul>
+			  </div>
+			  <div class="modal-footer">
+			    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		</div>
+	</div>
 </body>
+
 <script>
   const answers = [
     "at", "in", "on", "on", "at",

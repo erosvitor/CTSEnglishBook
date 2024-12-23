@@ -142,10 +142,55 @@
     </div>
 		<br/>
     <button type="button" class="btn btn-primary" onclick="checkAnswers()">Check</button>
-    <button type="button" class="btn btn-secondary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">Info</button>
     <br/><br/>
   </div>  
+
+	<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable">
+			<div class="modal-content">
+			  <div class="modal-header">
+			    <h5 class="modal-title" id="exampleModalLabel">Frases interrogativas</h5>
+			    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			  </div>
+			  <div class="modal-body">
+					<p><b>Frases contendo verbo to be</b></p>
+					<ul>
+					  <li><b>Afirmativa:</b> You are Brazilian (Você é brasileiro)</li>
+					  <li><b>Interrogativa:</b> Are you Brazilian? (Você é brasileiro?)</li>
+					</ul>
+					<ul>
+					  <li><b>Afirmativa:</b> She is Canadian (Ela é canadense)</li>
+					  <li><b>Interrogativa:</b> Is she Canadian? (Ela é canadense?)</li>
+					</ul>
+					<p><b>Frases contendo outros verbos</b></p>
+					<ul>
+					  <li><b>Afirmativa:</b> You go to school</li>
+					  <li><b>Interrogativa:</b> Do you go to school?</li>
+					</ul>
+					<ul> 
+					  <li><b>Afirmativa:</b> He goes to school</li>
+					  <li><b>Interrogativa:</b> Does he go to school?</li>
+					</ul>
+					<p><b>Frases contendo verbos auxiliares</b></p>
+					<ul>
+					  <li><b>Afirmativa:</b> You will stay here (Você ficará aqui)</li>
+					  <li><b>Interrogativa:</b> Will you stay here? (Você ficará aqui?)</li>
+					</ul>
+					<ul>
+					  <li><b>Afirmativa:</b> She could go with you (Ela poderia ir com você)</li>
+					  <li><b>Interrogativa:</b> Could she go with you? (Ela poderia ir com você?)</li>
+					</ul>
+			  </div>
+			  <div class="modal-footer">
+			    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		</div>
+	</div>
 </body>
+
 <script>
   const answers = [
     "Does he go to school on saturday?",

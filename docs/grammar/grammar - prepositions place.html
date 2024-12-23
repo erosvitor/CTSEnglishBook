@@ -248,10 +248,44 @@
 		</div>
 		<br/>
     <button type="button" class="btn btn-primary" onclick="checkAnswers()">Check</button>
-    <button type="button" class="btn btn-secondary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">Info</button>
     <br/><br/>
   </div>
+
+	<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable">
+			<div class="modal-content">
+			  <div class="modal-header">
+			    <h5 class="modal-title" id="exampleModalLabel">Preposições de local</h5>
+			    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			  </div>
+			  <div class="modal-body">
+					<p><b>in</b> = usado para regiões (bairro, cidade, estado, país e continente)</p>
+					<ul>
+					  <li>I live in Curitiba</li>
+					</ul>
+					<p><b>on</b> = usado para referências (não é o local exato, com nome e número)</p>
+					<ul>
+					  <li>I live on Baker Street</li>
+					  <li>I live on Park Avenue</li>
+					  <li>I live on James Square</li>
+					</ul>
+					<p><b>at</b> = usado para locais específicos (nome e número)</p>
+					<ul>
+					  <li>I live at 5, Baker Street</li>
+					  <li>I live at 6, Park Avenue</li>
+					  <li>I live at 7, James Square</li>
+					</ul>
+			  </div>
+			  <div class="modal-footer">
+			    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		</div>
+	</div>
 </body>
+
 <script>
   const answers = [
     "in", "at", "in", "on", "on", "at", "in", "in", "at", "on",

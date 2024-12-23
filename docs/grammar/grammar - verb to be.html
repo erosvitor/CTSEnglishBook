@@ -17,7 +17,7 @@
     input[type=text] {
       width: 80px;
     }  
-  </style
+  </style>
 </head>
 <body>
   <div class="container-fluid p-4 bg-primary text-white text-center">
@@ -248,10 +248,38 @@
 		</div>
 		<br/>
     <button type="button" class="btn btn-primary" onclick="checkAnswers()">Check</button>
-    <button type="button" class="btn btn-secondary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">Info</button>
     <br/><br/>
   </div>
+
+	<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable">
+			<div class="modal-content">
+			  <div class="modal-header">
+			    <h5 class="modal-title" id="exampleModalLabel">Verb To Be</h5>
+			    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			  </div>
+			  <div class="modal-body">
+					<ul class="list-unstyled">
+						<li>I am</li>
+						<li>You are</li>
+						<li>He is</li>
+						<li>She is</li>
+						<li>It is</li>
+						<li>We are</li>
+						<li>You are</li>
+						<li>They are</li>
+					</ul>
+			  </div>
+			  <div class="modal-footer">
+			    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		</div>
+	</div>
 </body>
+
 <script>
   const answers = [
     "are", "is", "is", "are", "is", "is", "am", "are", "are", 
@@ -259,5 +287,6 @@
   ];
 </script>
 <script src="../js/validate-input-fields.js"></script>
+
 </html>
 

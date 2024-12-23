@@ -249,10 +249,37 @@
 		</div>
 		<br/>
     <button type="button" class="btn btn-primary" onclick="checkAnswers()">Check</button>
-    <button type="button" class="btn btn-secondary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">Info</button>
     <br/><br/>
   </div>
+
+	<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable">
+			<div class="modal-content">
+			  <div class="modal-header">
+			    <h5 class="modal-title" id="exampleModalLabel">Conjugar verbos</h5>
+			    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			  </div>
+			  <div class="modal-body">
+			    <p>Verbos terminados em:</p>
+					<ul>
+						<li>o, s, x, sh, ch = +es</li>
+						<li>vogal + y = +s</li>
+						<li>consoante + y = -y + ies</li>
+						<li>restante = +s</li>
+						<li>exceto have = has</li>
+					</ul>
+					<p><b>Obs:</b> Só se conjuga verbo na terceira pessoal do singular (He, She, It)</p>
+			  </div>
+			  <div class="modal-footer">
+			    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		</div>
+	</div>
 </body>
+
 <script>
   const answers = [
     "works", "speak", "has", "play", "goes", "travels", "work", "like",
@@ -261,5 +288,6 @@
   ];
 </script>
 <script src="../js/validate-input-fields.js"></script>
+
 </html>
 
