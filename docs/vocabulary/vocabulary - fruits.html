@@ -20,109 +20,59 @@
   <div class="container mt-5">
     <h3>Translate to english</h3>
     <br/>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">1. Maçã</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion1" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">2. Banana</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion2" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">3. Mamão</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion3" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">4. Pera</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion4" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">5. Melância</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion5" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">6. Abacaxi</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion6" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">7. Manga</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion7" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">8. Limão</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion8" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">9. Uva</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion9" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">10. Melão</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion10" type="text" class="form-control">
-      </div>
-    </div>  
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">11. Morango</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion11" type="text" class="form-control">
-      </div>
-    </div>  
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">12. Abacate</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion12" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">13. Pêssego</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion13" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">14. Figo</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion14" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">15. Caqui</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion15" type="text" class="form-control">
-      </div>
-    </div>
+    <div id="divQuestions"></div>
 		<br/>
     <button type="button" class="btn btn-primary" onclick="checkAnswers()">Check</button>
-    <button type="button" class="btn btn-secondary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" onclick="tryAgain()">Try again</button>
     <br/><br/>
   </div>  
 </body>
 <script>
-  const answers = [
-    "apple", "banana", "papaya", "pear", "watermelon",
-    "pineapple", "mango", "lemon", "grape", "melon",
-    "strawberry", "avocado", "peach", "fig", "khaki"
+  const questions = [
+    "Maçã",
+    "Banana",
+    "Mamão",
+    "Pera",
+    "Melância",
+    "Abacaxi",
+    "Manga",
+    "Limão",
+    "Uva",
+    "Melão",
+    "Morango",
+    "Abacate",
+    "Pêssego",
+    "Figo",
+    "Caqui"
   ];
+
+  const answers = [
+    "apple",
+    "banana",
+    "papaya",
+    "pear",
+    "watermelon",
+    "pineapple",
+    "mango",
+    "lemon",
+    "grape",
+    "melon",
+    "strawberry",
+    "avocado",
+    "peach",
+    "fig",
+    "khaki"
+  ];
+  
+  const answerHasMoreThanOneOption = false;
 </script>
 <script src="../js/validate-input-fields.js"></script> 
+</html>
+</script>
+<script src="../js/create-input-fields.js"></script> 
+<script src="../js/validate-input-fields.js"></script> 
+<script>
+window.onload = createQuestions;
+</script>
 </html>
 

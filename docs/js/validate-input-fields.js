@@ -2,12 +2,12 @@ function checkAnswers() {
   let correctAnwers = 0;
 
   answers.forEach((answer, index) => {
-    const input = document.getElementById(`edtQuestion${index + 1}`);
+    const input = document.getElementById(`inputQuestion${index + 1}`);
     const userAnswer = input.value.trim().toLowerCase();
 
     input.nextElementSibling?.remove(); // Remove old message if exists
 
-    if (userAnswer.length > 0 && answer.toLowerCase().includes(userAnswer)) {
+    if (answerIsCorrect(userAnswer, answer)) {
       // Mark as correct
       input.classList.remove("is-invalid");
       input.classList.add("is-valid");
@@ -22,13 +22,19 @@ function checkAnswers() {
       input.parentNode.appendChild(feedback);
     }
   });
+}
 
-  //alert(`Você acertou ${correctAnwers} de ${answers.length} questões.`);
+function answerIsCorrect(userAnswer, answer) {
+  if (answerHasMoreThanOneOption) {
+    return userAnswer.length > 0 && answer.toLowerCase().includes(userAnswer);
+  } else {
+    return userAnswer.length > 0 && answer.toLowerCase() === userAnswer;
+  }  
 }
 
 function tryAgain() {
   answers.forEach((_, index) => {
-    const input = document.getElementById(`edtQuestion${index + 1}`);
+    const input = document.getElementById(`inputQuestion${index + 1}`);
     input.value = "";
     input.classList.remove("is-valid", "is-invalid");
     input.nextElementSibling?.remove(); // Remove message

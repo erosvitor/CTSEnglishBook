@@ -20,78 +20,46 @@
   <div class="container mt-5">
     <h3>Translate to english</h3>
     <br/>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">1. Vermelho</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion1" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">2. Azul</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion2" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">3. Amarelo</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion3" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">4. Verde</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion4" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">5. Roxo</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion5" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">6. Laranja</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion6" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">7. Preto</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion7" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">8. Cinza</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion8" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">9. Branco</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion9" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">10. Rosa</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion10" type="text" class="form-control">
-      </div>
-    </div>
-		<br/>
+    <div id="divQuestions"></div>
+    <br/>
     <button type="button" class="btn btn-primary" onclick="checkAnswers()">Check</button>
-    <button type="button" class="btn btn-secondary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" onclick="tryAgain()">Try again</button>
     <br/><br/>
   </div>  
 </body>
 <script>
-  const answers = [
-    "red", "blue", "yellow", "green", "purple",
-    "orange", "black", "gray", "white", "pink"
+  const questions = [
+    "Vermelho",
+    "Azul",
+    "Amarelo",
+    "Verde",
+    "Roxo",
+    "Laranja",
+    "Preto",
+    "Cinza",
+    "Branco",
+    "Rosa"
   ];
+
+  const answers = [
+    "red",
+    "blue",
+    "yellow",
+    "green",
+    "purple",
+    "orange",
+    "black",
+    "gray",
+    "white",
+    "pink"
+  ];
+  
+  const answerHasMoreThanOneOption = false;
 </script>
+<script src="../js/create-input-fields.js"></script> 
 <script src="../js/validate-input-fields.js"></script> 
+<script>
+window.onload = createQuestions;
+</script>
 </html>
 

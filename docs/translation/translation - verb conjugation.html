@@ -20,133 +20,37 @@
   <div class="container mt-5">
     <h3>Translation to Portuguese</h3>
     <br/>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">1. She works here</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion1" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">2. You speak english</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion2" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">3. He has a car</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion3" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">4. They play soccer</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion4" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">5. John goes to school</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion5" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">6. He travels a lot</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion6" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">7. I work a lot</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion7" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">8. We like ice cream</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion8" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">9. She wants a new cell phone</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion9" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">10. Rebecca studies chinese</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion10" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">11. Mark and Bob have a house in Canada</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion11" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">12. The man fixes computers</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion12" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">13. She tals to me</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion13" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">14. Patrick watches series</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion14" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">15. We love music</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion15" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">16. Sarah enjoys games</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion16" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">17. I sing in the shower</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion17" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">18. He does homework every day</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion18" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">19. He tries the exercises every week</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion19" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">20. They learn Japanese at school</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion20" type="text" class="form-control">
-      </div>
-    </div>
+    <div id="divQuestions"></div>    
 		<br/>
     <button type="button" class="btn btn-primary" onclick="checkAnswers()">Check</button>
-    <button type="button" class="btn btn-secondary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" onclick="tryAgain()">Try again</button>
     <br/><br/>
   </div>  
 </body>
 <script>
+  const questions = [
+    "She works here",
+    "You speak english",
+    "He has a car",
+    "They play soccer",
+    "John goes to school",
+    "He travels a lot",
+    "I work a lot",
+    "We like ice cream",
+    "She wants a new cell phone",
+    "Rebecca studies chinese",
+    "Mark and Bob have a house in Canada",
+    "The man fixes computers",
+    "She tals to me",
+    "Patrick watches series",
+    "We love music",
+    "Sarah enjoys games",
+    "I sing in the shower",
+    "He does homework every day",
+    "He tries the exercises every week",
+    "They learn Japanese at school"
+  ];
+  
   const answers = [
     "Ela trabalha aqui",
     "Você fala inglês",
@@ -169,7 +73,13 @@
     "Ele tenta os exercícios toda semana",
     "Eles aprendem japonês na escola|Elas aprendem japonês na escola"
   ];
+  
+  const answerHasMoreThanOneOption = true;
 </script>
-<script src="../js/validate-input-fields.js"></script>
+<script src="../js/create-input-fields.js"></script> 
+<script src="../js/validate-input-fields.js"></script> 
+<script>
+window.onload = createQuestions;
+</script>
 </html>
 

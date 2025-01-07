@@ -20,133 +20,37 @@
   <div class="container mt-5">
     <h3>Translation to Portuguese</h3>
     <br/>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">1. Does he go to school on saturday?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion1" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">2. Do you sleep early?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion2" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">3. Is Michael a good student?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion3" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">4. Do they work at night?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion4" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">5. Do Tina and Jennifer speak french?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion5" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">6. Will Kevin buy a house?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion6" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">7. Are you tired today?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion7" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">8. Does she speak chinese?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion8" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">9. Does he study with you?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion9" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">10. Can you open the window?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion10" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">11. Do they have a dog?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion11" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">12. Is John your brother?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion12" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">13. Would you live in Miami?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion13" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">14. Can he play basketball?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion14" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">15. Are you in school?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion15" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">16. Could you stay home?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion16" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">17. Does she like chocolate?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion17" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">18. Do you want a coffee?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion18" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">19. Can you close the door?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion19" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">20. Is she happy today?</label>
-      <div class="col-sm-9">
-        <input id="edtQuestion20" type="text" class="form-control">
-      </div>
-    </div>
+    <div id="divQuestions"></div>
 		<br/>
     <button type="button" class="btn btn-primary" onclick="checkAnswers()">Check</button>
-    <button type="button" class="btn btn-secondary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" onclick="tryAgain()">Try again</button>
     <br/><br/>
   </div>  
 </body>
 <script>
+  const questions = [
+    "Does he go to school on saturday?",
+    "Do you sleep early?",
+    "Is Michael a good student?",
+    "Do they work at night?",
+    "Do Tina and Jennifer speak french?",
+    "Will Kevin buy a house?",
+    "Are you tired today?",
+    "Does she speak chinese?",
+    "Does he study with you?",
+    "Can you open the window?",
+    "Do they have a dog?",
+    "Is John your brother?",
+    "Would you live in Miami?",
+    "Can he play basketball?",
+    "Are you in school?",
+    "Could you stay home?",
+    "Does she like chocolate?",
+    "Do you want a coffee?",
+    "Can you close the door?",
+    "Is she happy today?"
+  ];
+
   const answers = [
     "Ele vai para a escola no sábado?",
     "Você dorme cedo?",
@@ -169,7 +73,13 @@
     "Você pode fechar a porta?",
     "Ela está feliz hoje?"
   ];
+  
+  const answerHasMoreThanOneOption = true;
 </script>
-<script src="../js/validate-input-fields.js"></script>
+<script src="../js/create-input-fields.js"></script> 
+<script src="../js/validate-input-fields.js"></script> 
+<script>
+window.onload = createQuestions;
+</script>
 </html>
 

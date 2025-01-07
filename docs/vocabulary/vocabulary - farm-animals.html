@@ -20,78 +20,46 @@
   <div class="container mt-5">
     <h3>Translate to english</h3>
     <br/>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">1. Cachorro</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion1" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">2. Gato</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion2" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">3. Galinha</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion3" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">4. Galo</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion4" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">5. Vaca</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion5" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">6. Boi</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion6" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">7. Porco</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion7" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">8. Pato</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion8" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">9. Cavalo</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion9" type="text" class="form-control">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-sm-2 col-form-label">10. Égua</label>
-      <div class="col-sm-10">
-        <input id="edtQuestion10" type="text" class="form-control">
-      </div>
-    </div>
+    <div id="divQuestions"></div>
 		<br/>
     <button type="button" class="btn btn-primary" onclick="checkAnswers()">Check</button>
-    <button type="button" class="btn btn-secondary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" onclick="tryAgain()">Try again</button>
     <br/><br/>
   </div>  
 </body>
 <script>
-  const answers = [
-    "dog", "cat", "chicken", "rooster", "cow",
-    "ox", "pig", "duck", "horse", "mare"
+  const questions = [
+    "Cachorro",
+    "Gato",
+    "Galinha",
+    "Galo",
+    "Vaca",
+    "Boi",
+    "Porco",
+    "Pato",
+    "Cavalo",
+    "Égua"
   ];
+
+  const answers = [
+    "dog",
+    "cat",
+    "chicken",
+    "rooster",
+    "cow",
+    "ox",
+    "pig",
+    "duck",
+    "horse",
+    "mare"
+  ];
+  
+  const answerHasMoreThanOneOption = false;
 </script>
+<script src="../js/create-input-fields.js"></script> 
 <script src="../js/validate-input-fields.js"></script> 
+<script>
+window.onload = createQuestions;
+</script>
 </html>
 
