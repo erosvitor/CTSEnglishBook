@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="author" content="Eros Vitor Bornatowski">
+  <meta name="description" content="Exercises to reinforce English vocabulary and grammar.">
+
+  <title>CTSEnglishBook</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container-fluid p-4 bg-primary text-white text-center">
+    <h1>Grammer - Verb To Be - Past Tense</h1>
+  </div>
+
+  <div class="container mt-5">
+    <h3>Transform verb To Be to past tense</h3>
+    <br/>
+    <div id="divQuestions"></div>
+    <br/>
+    <button type="button" class="btn btn-primary" onclick="checkAnswers()">Check</button>
+    <button type="button" class="btn btn-primary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">Info</button>
+    <br/><br/>
+  </div>
+
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Verbo To Be - Passado</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-unstyled">
+            <li>I am - I was (<i>Eu era/estava, fui/estive</i>)</li>
+            <li>You are - You were (<i>Você era/estava, Tu eras/estavas</i>)</li>
+            <li>He is - He was (<i>Ele era/estava</i>)</li>
+            <li>She is - She was (<i>Ela era/estava</i>)</li>
+            <li>It is - It was (<i>Ela era/estava</i>)</li>
+            <li>We are - We were (<i>Nós erámos/estávamos</i>)</li>
+            <li>You are - You were (<i>Vós éreis/estáveis</i>)</li>
+            <li>They are - They were (<i>Eles eram/estavam</i>)</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  const questions = [
+    "He is at the office",
+    "You are a student",
+    "Michael is married",
+    "They are working",
+    "Tina and kevin are friends",
+    "She is sad",
+    "We are swimming",
+    "I am in school",
+    "He is hungry",
+    "You are a doctor",
+    "They are at the beach",
+    "Peter is her boyfriend",
+    "We are roommates",
+    "He is playing soccer",
+    "You are sick today",
+    "She is eating chocolate",
+    "I am reading a book",
+    "He is in italy",
+    "You are good students",
+    "I am satisfied"
+  ];
+
+  const answers = [
+    "He was at the office",
+    "You were a student",
+    "Michael was married",
+    "They were working",
+    "Tina and Kevin were friends",
+    "She was sad",
+    "We were swimming",
+    "I was in school",
+    "He was hungry",
+    "You were a doctor",
+    "They were at the beach",
+    "Peter was her boyfriend",
+    "We were roommates",
+    "He was playing soccer",
+    "You were sick today",
+    "She was eating chocolate",
+    "I was reading a book",
+    "She was happy today",
+    "He was in Italy",
+    "You were good students",
+    "I was satisfied"
+  ];
+
+  const answerHasMoreThanOneOption = false;
+</script>
+<script src="../js/create-input-fields.js"></script>
+<script src="../js/validate-input-fields.js"></script>
+<script>
+window.onload = createQuestions;
+</script>
+</html>
+

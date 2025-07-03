@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="author" content="Eros Vitor Bornatowski">
+  <meta name="description" content="Exercises to reinforce English vocabulary and grammar.">
+
+  <title>CTSEnglishBook</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container-fluid p-4 bg-primary text-white text-center">
+    <h1>Translation - Verb To Be - Past Tense - Negative</h1>
+  </div>
+  <div class="container mt-5">
+    <h3>Translation to Portuguese</h3>
+    <br/>
+    <div id="divQuestions"></div>
+    <br/>
+    <button type="button" class="btn btn-primary" onclick="checkAnswers()">Check</button>
+    <button type="button" class="btn btn-primary" onclick="tryAgain()">Try again</button>
+    <br/><br/>
+  </div>  
+</body>
+<script>
+  const questions = [
+    "He wasn’t at the office",
+    "You weren’t a student",
+    "Michael wasn’t married",
+    "They weren’t working",
+    "Tina and kevin weren’t friends",
+    "She wasn’t sad",
+    "We weren’t swimming",
+    "I wasn’t in school",
+    "He wasn’t hungry",
+    "You weren’t a doctor",
+    "They weren’t at the beach",
+    "Peter wasn’t her boyfriend",
+    "We weren’t roommates",
+    "He wasn’t playing soccer",
+    "You weren’t sick today",
+    "You weren’t lazy",
+    "She wasn’t eating chocolate",
+    "I wasn’t reading a book",
+    "You weren’t angry",
+    "She wasn’t happy today"
+  ];
+
+  const answers = [
+    "Ele não estava no escritório",
+    "Você não era um estudante",
+    "Michael não foi casado",
+    "Eles não estavam trabalhando",
+    "Tina e kevin não eram amigos",
+    "Ela não estava triste",
+    "Nós não estávamos nadando",
+    "Eu não estava na escola",
+    "Ele não estava com fome",
+    "Você não era médico",
+    "Eles não estavam na praia",
+    "Peter não era o namorado dela",
+    "Nós não éramos colegas de quarto",
+    "Ele não estava jogando futebol",
+    "Você não estava doente hoje",
+    "Você não era preguiçoso",
+    "Ela não comia chocolate",
+    "Eu não estava lendo um livro",
+    "Você não estava irritado",
+    "Ela não estava feliz hoje"
+  ];
+  
+  const answerHasMoreThanOneOption = false;
+</script>
+<script src="../js/create-input-fields.js"></script> 
+<script src="../js/validate-input-fields.js"></script> 
+<script>
+window.onload = createQuestions;
+</script>
+</html>
+

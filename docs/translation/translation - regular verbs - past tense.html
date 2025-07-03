@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="author" content="Eros Vitor Bornatowski">
+  <meta name="description" content="Exercises to reinforce English vocabulary and grammar.">
+
+  <title>CTSEnglishBook</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container-fluid p-4 bg-primary text-white text-center">
+    <h1>Translation - Regular verbs - Past tense</h1>
+  </div>
+  <div class="container mt-5">
+    <h3>Translation to Portuguese</h3>
+    <br/>
+    <div id="divQuestions"></div>
+    <br/>
+    <button type="button" class="btn btn-primary" onclick="checkAnswers()">Check</button>
+    <button type="button" class="btn btn-primary" onclick="tryAgain()">Try again</button>
+    <br/><br/>
+  </div>  
+</body>
+<script>
+  const questions = [
+    "She liked his jackets",
+    "You studied english",
+    "He stayed with you",
+    "They kicked the ball",
+    "She talked with you",
+    "He called her",
+    "I offered help",
+    "We lived in japan",
+    "They missed the bus",
+    "I planned my vacation",
+    "She enjoyed dinner",
+    "You tied your shoes",
+    "He admitted he was wrong",
+    "They stopped dating",
+    "They worked yesterday",
+    "She used the stairs",
+    "I carried the bags",
+    "He destroyed your plans",
+    "Tina agreed to go out",
+    "We repeated the song"
+  ];
+
+  const answers = [
+    "Ela gostou das jaquetas dele",
+    "Você estudou inglês",
+    "Ele ficou com você",
+    "Eles chutaram a bola",
+    "Ela conversou com você",
+    "Ele ligou para ela",
+    "Eu ofereci ajuda",
+    "Nós moramos no japão",
+    "Eles perderam o ônibus",
+    "Eu planejei minhas férias",
+    "Ela apreciou o jantar",
+    "Você amarrou seus sapatos",
+    "Ele admitiu que estava errado",
+    "Eles pararam de se encontrar",
+    "Eles trabalharam ontem",
+    "Ela usou as escadas",
+    "Eu carreguei as malas",
+    "Ele destruiu seus planos",
+    "Tina concordou em sair",
+    "Nós repetimos a música"
+  ];
+  
+  const answerHasMoreThanOneOption = false;
+</script>
+<script src="../js/create-input-fields.js"></script> 
+<script src="../js/validate-input-fields.js"></script> 
+<script>
+window.onload = createQuestions;
+</script>
+</html>
+

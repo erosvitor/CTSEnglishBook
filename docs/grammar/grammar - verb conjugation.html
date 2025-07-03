@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="author" content="Eros Vitor Bornatowski">
+  <meta name="description" content="Exercises to reinforce English vocabulary and grammar">
+
+  <title>CTSEnglishBook</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  
+  <style type="text/css">
+    input[type=text] {
+      width: 110px;
+    }  
+  </style
+</head>
+<body>
+  <div class="container-fluid p-4 bg-primary text-white text-center">
+    <h1>Grammer - Verb conjugation</h1>
+  </div>
+
+  <div class="container mt-5">
+    <h3>Conjugate the verbs</h3>
+    <br/>
+    <div id="divQuestions"></div>
+    <br/>
+    <button type="button" class="btn btn-primary" onclick="checkAnswers()">Check</button>
+    <button type="button" class="btn btn-primary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">Info</button>
+    <br/><br/>
+  </div>
+
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Conjugar verbos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Verbos terminados em:</p> 
+          <ul>
+            <li>o, s, x, sh, ch = acrescenta <b>es</b></li>
+            <li>vogal + y = acrescenta <b>s</b></li>
+            <li>consoante + y = retira o <b>y</b> e acrescenta <b>ies</b></li>
+            <li>restante = acrescenta <b>s</b></li>
+            <li>Exceção: verbo <b>have</b> fica <b>has</b></li>
+          </ul>
+          <p><b>Obs:</b> Só se conjuga verbo na terceira pessoal do singular (He, She, It)</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>  
+</body>
+<script>
+  const questions = [
+    { labelBefore: "She", labelAfter: "here (to work)" },
+    { labelBefore: "You", labelAfter: "english (to speak)" },
+    { labelBefore: "He", labelAfter: "a car (to have)" },
+    { labelBefore: "They", labelAfter: "soccer (to play)" },
+    { labelBefore: "John", labelAfter: "to school (to go)" },
+    { labelBefore: "He", labelAfter: "a lot (to travel)" },
+    { labelBefore: "I", labelAfter: "a lot (to work)" },
+    { labelBefore: "We", labelAfter: "ice-cream (to like)" },
+    { labelBefore: "She", labelAfter: "a new cell phone (to want)" },
+    { labelBefore: "Rebecca", labelAfter: "chinese (to study)" },
+    { labelBefore: "Mark and Bob", labelAfter: "a house in Canada (to have)" },
+    { labelBefore: "The man", labelAfter: "computers. (to fix)" },
+    { labelBefore: "She", labelAfter: "to me (to talk)" },
+    { labelBefore: "Patrick", labelAfter: "series (to watch)" },
+    { labelBefore: "We", labelAfter: "music (to love)" },
+    { labelBefore: "Sarah", labelAfter: "games (to enjoy)" },
+    { labelBefore: "I", labelAfter: "in the shower (to sing)" },
+    { labelBefore: "He", labelAfter: "homework every day (to do)" },
+    { labelBefore: "He", labelAfter: "the exercises every week (try)" },
+    { labelBefore: "They", labelAfter: "Japanese at school (to learn)" }
+  ];
+
+  const answers = [
+    "works", "speak", "has", "play", "goes", "travels", "work", "like",
+    "wants", "studies", "have", "fixes", "talks", "watches", "love", 
+    "enjoys", "sing", "does", "tries", "learn"
+  ];
+  
+  const answerHasMoreThanOneOption = false;
+</script>
+<script src="../js/create-input-with-labels-before-and-after.js"></script> 
+<script src="../js/validate-input-fields.js"></script> 
+<script>
+window.onload = createQuestions;
+</script>
+</html>
+

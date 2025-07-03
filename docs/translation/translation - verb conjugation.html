@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="author" content="Eros Vitor Bornatowski">
+  <meta name="description" content="Exercises to reinforce English vocabulary and grammar.">
+
+  <title>CTSEnglishBook</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container-fluid p-4 bg-primary text-white text-center">
+    <h1>Translation - Verb conjugation</h1>
+  </div>
+  <div class="container mt-5">
+    <h3>Translation to Portuguese</h3>
+    <br/>
+    <div id="divQuestions"></div>
+    <br/>
+    <button type="button" class="btn btn-primary" onclick="checkAnswers()">Check</button>
+    <button type="button" class="btn btn-primary" onclick="tryAgain()">Try again</button>
+    <br/><br/>
+  </div>  
+</body>
+<script>
+  const questions = [
+    "She works here",
+    "You speak english",
+    "He has a car",
+    "They play soccer",
+    "John goes to school",
+    "He travels a lot",
+    "I work a lot",
+    "We like ice cream",
+    "She wants a new cell phone",
+    "Rebecca studies chinese",
+    "Mark and Bob have a house in Canada",
+    "The man fixes computers",
+    "She tals to me",
+    "Patrick watches series",
+    "We love music",
+    "Sarah enjoys games",
+    "I sing in the shower",
+    "He does homework every day",
+    "He tries the exercises every week",
+    "They learn Japanese at school"
+  ];
+  
+  const answers = [
+    "Ela trabalha aqui",
+    "Você fala inglês",
+    "Ele tem um carro",
+    "Eles jogam futebol|Elas jogam futebol",
+    "João vai à escola",
+    "Ele viaja bastante",
+    "Eu trabalho muito",
+    "Nós gostamos de sorvete",
+    "Ela quer um celular novo",
+    "Rebecca estuda chinês",
+    "Mark e Bob tem uma casa no Canadá",
+    "O homem conserta computadores",
+    "Ela conversa comigo",
+    "Patrick assiste séries",
+    "Nós amamos música",
+    "Sarah aprecia jogos",
+    "Eu canto no banheiro",
+    "Ele faz lição de casa todos os dias",
+    "Ele tenta os exercícios toda semana",
+    "Eles aprendem japonês na escola|Elas aprendem japonês na escola"
+  ];
+  
+  const answerHasMoreThanOneOption = true;
+</script>
+<script src="../js/create-input-fields.js"></script> 
+<script src="../js/validate-input-fields.js"></script> 
+<script>
+window.onload = createQuestions;
+</script>
+</html>
+

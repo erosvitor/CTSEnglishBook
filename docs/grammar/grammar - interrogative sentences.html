@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="author" content="Eros Vitor Bornatowski">
+  <meta name="description" content="Exercises to reinforce English vocabulary and grammar.">
+
+  <title>CTSEnglishBook</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container-fluid p-4 bg-primary text-white text-center">
+    <h1>Grammar - Interrogative sentences</h1>
+  </div>
+
+  <div class="container mt-5">
+    <h3>Transform the sentences into questions</h3>
+    <br/>
+    <div id="divQuestions"></div>
+    <br/>
+    <button type="button" class="btn btn-primary" onclick="checkAnswers()">Check</button>
+    <button type="button" class="btn btn-primary" onclick="tryAgain()">Try again</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">Info</button>
+    <br/><br/>
+  </div>
+
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Frases interrogativas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><b>Frases contendo verbo to be</b></p>
+          <ul>
+            <li><b>Afirmativa:</b> You are Brazilian</li>
+            <li><b>Interrogativa:</b> Are you Brazilian?</li>
+          </ul>
+          <ul>
+            <li><b>Afirmativa:</b> She is Canadian</li>
+            <li><b>Interrogativa:</b> Is she Canadian?</li>
+          </ul>
+          <p><b>Frases contendo outros verbos</b></p>
+          <ul>
+            <li><b>Afirmativa:</b> You go to school</li>
+            <li><b>Interrogativa:</b> Do you go to school?</li>
+          </ul>
+          <ul> 
+            <li><b>Afirmativa:</b> He goes to school</li>
+            <li><b>Interrogativa:</b> Does he go to school?</li>
+          </ul>
+          <p><b>Frases contendo verbos auxiliares</b></p>
+          <ul>
+            <li><b>Afirmativa:</b> You will stay here</li>
+            <li><b>Interrogativa:</b> Will you stay here?</li>
+          </ul>
+          <ul>
+            <li><b>Afirmativa:</b> She could go with you</li>
+            <li><b>Interrogativa:</b> Could she go with you?</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+</body>
+<script>
+  const questions = [
+    "He goes to school on saturday",
+    "You sleep early",
+    "Michael is a good student",
+    "They work at night",
+    "Tina and Jennifer speak french",
+    "Kevin will buy a house",
+    "You are tired today",
+    "She speaks chinese",
+    "He studies with you",
+    "You can open the window",
+    "They have a dog",
+    "John is your brother",
+    "You would live in Miani",
+    "He can play basketball",
+    "You are in school",
+    "You could stay home",
+    "She likes chocolate",
+    "You want a coffee",
+    "You can close the door",
+    "She is happy today"
+  ];
+
+  const answers = [
+    "Does he go to school on saturday?",
+    "Do you sleep early?",
+    "Is michael a good student?",
+    "Do they work at night?",
+    "Do tina and jennifer speak french?",
+    "Will kevin buy a house?",
+    "Are you tired today?",
+    "Does she speak chinese?",
+    "Does he study with you?",
+    "Can you open the window?",
+    "Do they have a dog?",
+    "Is john your brother?",
+    "Would you live in miami?",
+    "Can he play basketball?",
+    "Are you in school?",
+    "Could you stay home?",
+    "Does she like chocolate?",
+    "Do you want a coffee?",
+    "Can you close the door?",
+    "Is she happy today?"
+  ];
+  
+  const answerHasMoreThanOneOption = false;
+</script>
+<script src="../js/create-input-fields.js"></script> 
+<script src="../js/validate-input-fields.js"></script> 
+<script>
+window.onload = createQuestions;
+</script>
+</html>
+
